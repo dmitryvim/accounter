@@ -5,11 +5,9 @@ import com.pengrad.telegrambot.UpdatesListener
 import com.pengrad.telegrambot.request.SendMessage
 
 
-class Bot {
-    fun init() {
-        // TODO do not commit to git
-        val token = ""
-        val bot = TelegramBot(token)
+class Bot(config: BotConfig) {
+    init {
+        val bot = TelegramBot(config.token)
         bot.setUpdatesListener { updates ->
             updates.forEach { update ->
                 run {
@@ -28,3 +26,5 @@ class Bot {
         }
     }
 }
+
+data class BotConfig(var token: String)

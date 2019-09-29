@@ -1,0 +1,5 @@
+web:
+  port: 8080
+
+telegram:
+  token: INSERT_YOUR_TOKEN
