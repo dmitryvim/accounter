@@ -20,6 +20,7 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("stdlib-jdk8"))
 
+    implementation("commons-codec:commons-codec:1.13")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.9.10")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.10")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.10")

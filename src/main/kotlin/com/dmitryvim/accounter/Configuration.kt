@@ -1,6 +1,7 @@
 package com.dmitryvim.accounter
 
-import com.dmitryvim.accounter.telegram.BotConfig
+import com.dmitryvim.accounter.telegram.TelegramConfig
+import com.dmitryvim.accounter.web.WebConfig
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory
 import com.fasterxml.jackson.module.kotlin.KotlinModule
@@ -13,7 +14,5 @@ fun readConfig(filename: String): Configuration {
 }
 
 data class Configuration(
-        var telegram: BotConfig,
+        var telegram: TelegramConfig,
         var web: WebConfig)
-
-data class WebConfig(var port: Int)

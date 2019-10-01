@@ -5,7 +5,7 @@ import com.pengrad.telegrambot.UpdatesListener
 import com.pengrad.telegrambot.request.SendMessage
 
 
-class Bot(config: BotConfig) {
+class Bot(config: TelegramConfig) {
     init {
         val bot = TelegramBot(config.token)
         bot.setUpdatesListener { updates ->
@@ -27,4 +27,4 @@ class Bot(config: BotConfig) {
     }
 }
 
-data class BotConfig(var token: String)
+data class TelegramConfig(var token: String)
